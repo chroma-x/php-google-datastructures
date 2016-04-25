@@ -66,11 +66,31 @@ class GeoLocationGeometry
 	}
 
 	/**
+	 * @param GeoLocation $location
+	 * @return $this
+	 */
+	public function setLocation($location)
+	{
+		$this->location = $location;
+		return $this;
+	}
+
+	/**
 	 * @return GeoLocationViewport
 	 */
 	public function getViewport()
 	{
 		return $this->viewport;
+	}
+
+	/**
+	 * @param GeoLocationViewport $viewport
+	 * @return $this
+	 */
+	public function setViewport($viewport)
+	{
+		$this->viewport = $viewport;
+		return $this;
 	}
 
 	/**
@@ -82,23 +102,15 @@ class GeoLocationGeometry
 	}
 
 	/**
-	 * @param GeoLocation $location
-	 * @return $this
+	 * @param int $index
+	 * @return GeoLocation
 	 */
-	public function setLocation($location)
+	public function getAccessPointAt($index)
 	{
-		$this->location = $location;
-		return $this;
-	}
-
-	/**
-	 * @param GeoLocationViewport $viewport
-	 * @return $this
-	 */
-	public function setViewport($viewport)
-	{
-		$this->viewport = $viewport;
-		return $this;
+		if (!isset($this->accessPoints[$index])) {
+			return null;
+		}
+		return $this->accessPoints[$index];
 	}
 
 	/**
@@ -140,9 +152,17 @@ class GeoLocationGeometry
 	/**
 	 * @return bool
 	 */
-	public function hasAccessPoint()
+	public function hasAccessPoints()
 	{
 		return count($this->accessPoints) > 0;
+	}
+
+	/**
+	 * @return int
+	 */
+	public function countAccessPoints()
+	{
+		return count($this->accessPoints);
 	}
 
 }
