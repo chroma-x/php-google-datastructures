@@ -1,9 +1,9 @@
 # PHP Google Data Structures
 
-[![Code Climate](https://codeclimate.com/github/markenwerk/php-google-places-suite/badges/gpa.svg)](https://codeclimate.com/github/markenwerk/php-google-places-suite)
-[![Latest Stable Version](https://poser.pugx.org/markenwerk/google-places-suite/v/stable)](https://packagist.org/packages/markenwerk/google-places-suite)
-[![Total Downloads](https://poser.pugx.org/markenwerk/google-places-suite/downloads)](https://packagist.org/packages/markenwerk/google-places-suite)
-[![License](https://poser.pugx.org/markenwerk/google-places-suite/license)](https://packagist.org/packages/markenwerk/google-places-suite)
+[![Code Climate](https://codeclimate.com/github/markenwerk/php-google-datastructures/badges/gpa.svg)](https://codeclimate.com/github/markenwerk/php-google-datastructures)
+[![Latest Stable Version](https://poser.pugx.org/markenwerk/google-datastructures/v/stable)](https://packagist.org/packages/markenwerk/google-datastructures)
+[![Total Downloads](https://poser.pugx.org/markenwerk/google-datastructures/downloads)](https://packagist.org/packages/markenwerk/google-datastructures)
+[![License](https://poser.pugx.org/markenwerk/google-datastructures/license)](https://packagist.org/packages/markenwerk/google-datastructures)
 
 A PHP library to query Google's Places service for querying locations and addresses and getting details by Places ID.
 
