@@ -21,22 +21,31 @@ class GeoLocationGeometry
 	private $viewport = null;
 
 	/**
+	 * @var GeoLocation[]
+	 */
+	private $accessPoints = array();
+
+	/**
 	 * @param array $geometryData
 	 * @return $this
 	 */
 	public function setFromServiceResult(array $geometryData)
 	{
-		$this->location = new GeoLocation($geometryData['location']['lat'], $geometryData['location']['lng']);
-		$this->viewport = new GeoLocationViewport(
-			new GeoLocation(
-				$geometryData['viewport']['northeast']['lat'],
-				$geometryData['viewport']['northeast']['lng']
-			),
-			new GeoLocation(
-				$geometryData['viewport']['southwest']['lat'],
-				$geometryData['viewport']['southwest']['lng']
-			)
-		);
+		if (isset($geometryData['location'])) {
+			$this->location = new GeoLocation($geometryData['location']['lat'], $geometryData['location']['lng']);
+		}
+		if (isset($geometryData['viewport'])) {
+			$this->viewport = new GeoLocationViewport(
+				new GeoLocation(
+					$geometryData['viewport']['northeast']['lat'],
+					$geometryData['viewport']['northeast']['lng']
+				),
+				new GeoLocation(
+					$geometryData['viewport']['southwest']['lat'],
+					$geometryData['viewport']['southwest']['lng']
+				)
+			);
+		}
 		return $this;
 	}
 
@@ -54,6 +63,14 @@ class GeoLocationGeometry
 	public function getViewport()
 	{
 		return $this->viewport;
+	}
+
+	/**
+	 * @return GeoLocation[]
+	 */
+	public function getAccessPoints()
+	{
+		return $this->accessPoints;
 	}
 
 	/**
@@ -77,6 +94,26 @@ class GeoLocationGeometry
 	}
 
 	/**
+	 * @param GeoLocation[] $accessPoints
+	 * @return $this
+	 */
+	public function setAccessPoints(array $accessPoints)
+	{
+		$this->accessPoints = $accessPoints;
+		return $this;
+	}
+
+	/**
+	 * @param GeoLocation $accessPoint
+	 * @return $this
+	 */
+	public function addAccessPoint(GeoLocation $accessPoint)
+	{
+		$this->accessPoints[] = $accessPoint;
+		return $this;
+	}
+
+	/**
 	 * @return bool
 	 */
 	public function hasLocation()
@@ -90,6 +127,14 @@ class GeoLocationGeometry
 	public function hasViewport()
 	{
 		return !is_null($this->viewport);
+	}
+
+	/**
+	 * @return bool
+	 */
+	public function hasAccessPoint()
+	{
+		return count($this->accessPoints) > 0;
 	}
 
 }
