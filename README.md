@@ -36,14 +36,14 @@ See [PHP Google Places Suite](https://github.com/markenwerk/php-google-places-su
 **Attention:** Plaese note that all getter methods on the `GeoLocationAddress` return a `GeoLocationAddressComponent` instance or `null`. For preventing calls on non-objects the `GeoLocationAddress` class provides methods to check whether the address components exists. 
 
 ```{php}
-// Retrieving a query result as GooglePlacesSuite\GooglePlacesDetailResult instance
+// Retrieving a query result as Markenwerk\GooglePlacesSuite\GooglePlacesDetailResult instance
 $googlePlacesDetailQuery = new GooglePlacesDetailQuery();
 $googlePlacesDetailQuery
 	->setApiKey($this->googlePlacesApiKey)
 	->query('GOOGLE_PLACES_ID');
 $queryResult = $googlePlacesDetailQuery->getResult();
 
-// Retieving address information as GoogleDataStructure\GeoLocation\GeoLocationAddress
+// Retieving address information as Markenwerk\GoogleDataStructure\GeoLocation\GeoLocationAddress
 if($queryResult->hasAddress()) {
 
 	if ($queryResult->getAddress()->hasStreetName()) {
@@ -97,7 +97,7 @@ if($queryResult->hasAddress()) {
 
 }
 
-// Retieving address information as GoogleDataStructure\GeoLocation\GeoLocationGeometry
+// Retieving address information as Markenwerk\GoogleDataStructure\GeoLocation\GeoLocationGeometry
 if ($queryResult->hasGeometry()) {
 
 	if ($queryResult->getGeometry()->hasLocation()) {

@@ -1,11 +1,11 @@
 <?php
 
-namespace GoogleDataStructure\GeoLocation;
+namespace Markenwerk\GoogleDataStructure\GeoLocation;
 
 /**
  * Class GeoLocationViewport
  *
- * @package GoogleDataStructure\GeoLocation
+ * @package Markenwerk\GoogleDataStructure\GeoLocation
  */
 class GeoLocationViewport
 {
