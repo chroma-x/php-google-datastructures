@@ -60,11 +60,13 @@ class GeoLocationAddress
 	public function setFromServiceResult(array $addressData)
 	{
 		$addressDataCount = count($addressData);
+		$validComponentTypes = $this->getValidTypes();
+		$validTypeCount = count($validComponentTypes);
 		for ($i = 0; $i < $addressDataCount; $i++) {
-			for ($j = 0; $j < count($addressData[$i]['types']); $j++) {
+			$typeCount = count($addressData[$i]['types']);
+			for ($j = 0; $j < $typeCount; $j++) {
 				$componentType = $addressData[$i]['types'][$j];
-				$validComponentTypes = $this->getValidTypes();
-				for ($k = 0; $k < count($validComponentTypes); $k++) {
+				for ($k = 0; $k < $validTypeCount; $k++) {
 					if (strpos($componentType, $validComponentTypes[$k]) === 0) {
 						$this->setResult(
 							$validComponentTypes[$k],

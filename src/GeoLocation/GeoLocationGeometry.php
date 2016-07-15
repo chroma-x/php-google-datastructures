@@ -47,7 +47,8 @@ class GeoLocationGeometry
 			);
 		}
 		if (isset($geometryData['access_points'])) {
-			for ($i = 0; $i < count($geometryData['access_points']); $i++) {
+			$accessPointCount = count($geometryData['access_points']);
+			for ($i = 0; $i < $accessPointCount; $i++) {
 				$this->addAccessPoint(new GeoLocation(
 					$geometryData['access_points'][$i]['location']['lat'],
 					$geometryData['access_points'][$i]['location']['lng']
