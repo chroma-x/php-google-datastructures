@@ -59,7 +59,8 @@ class GeoLocationAddress
 	 */
 	public function setFromServiceResult(array $addressData)
 	{
-		for ($i = 0; $i < count($addressData); $i++) {
+		$addressDataCount = count($addressData);
+		for ($i = 0; $i < $addressDataCount; $i++) {
 			for ($j = 0; $j < count($addressData[$i]['types']); $j++) {
 				$componentType = $addressData[$i]['types'][$j];
 				$validComponentTypes = $this->getValidTypes();
