@@ -1,5 +1,6 @@
 # PHP Google Data Structures
 
+[![SensioLabs Insight](https://img.shields.io/sensiolabs/i/e21fab61-3518-4b85-a849-9bb542d89062.svg)](https://insight.sensiolabs.com/projects/e21fab61-3518-4b85-a849-9bb542d89062)
 [![Code Climate](https://codeclimate.com/github/markenwerk/php-google-datastructures/badges/gpa.svg)](https://codeclimate.com/github/markenwerk/php-google-datastructures)
 [![Latest Stable Version](https://poser.pugx.org/markenwerk/google-datastructures/v/stable)](https://packagist.org/packages/markenwerk/google-datastructures)
 [![Total Downloads](https://poser.pugx.org/markenwerk/google-datastructures/downloads)](https://packagist.org/packages/markenwerk/google-datastructures)
