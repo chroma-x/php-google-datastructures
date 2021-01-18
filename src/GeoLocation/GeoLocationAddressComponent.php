@@ -1,11 +1,11 @@
 <?php
 
-namespace Markenwerk\GoogleDataStructure\GeoLocation;
+namespace ChromaX\GoogleDataStructure\GeoLocation;
 
 /**
  * Class GeoLocationAddressComponent
  *
- * @package Markenwerk\GoogleDataStructure\GeoLocation
+ * @package ChromaX\GoogleDataStructure\GeoLocation
  */
 class GeoLocationAddressComponent
 {

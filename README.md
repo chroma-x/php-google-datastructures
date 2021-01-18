@@ -1,10 +1,10 @@
 # PHP Google Data Structures
 
 [![SensioLabs Insight](https://img.shields.io/sensiolabs/i/ac6d58da-a89f-4785-b5c6-d6767ce7f8ca.svg)](https://insight.sensiolabs.com/projects/ac6d58da-a89f-4785-b5c6-d6767ce7f8ca)
-[![Code Climate](https://codeclimate.com/github/markenwerk/php-google-datastructures/badges/gpa.svg)](https://codeclimate.com/github/markenwerk/php-google-datastructures)
-[![Latest Stable Version](https://poser.pugx.org/markenwerk/google-datastructures/v/stable)](https://packagist.org/packages/markenwerk/google-datastructures)
-[![Total Downloads](https://poser.pugx.org/markenwerk/google-datastructures/downloads)](https://packagist.org/packages/markenwerk/google-datastructures)
-[![License](https://poser.pugx.org/markenwerk/google-datastructures/license)](https://packagist.org/packages/markenwerk/google-datastructures)
+[![Code Climate](https://codeclimate.com/github/chroma-x/php-google-datastructures/badges/gpa.svg)](https://codeclimate.com/github/chroma-x/php-google-datastructures)
+[![Latest Stable Version](https://poser.pugx.org/chroma-x/google-datastructures/v/stable)](https://packagist.org/packages/chroma-x/google-datastructures)
+[![Total Downloads](https://poser.pugx.org/chroma-x/google-datastructures/downloads)](https://packagist.org/packages/chroma-x/google-datastructures)
+[![License](https://poser.pugx.org/chroma-x/google-datastructures/license)](https://packagist.org/packages/chroma-x/google-datastructures)
 
 A PHP library to query Google's Places service for querying locations and addresses and getting details by Places ID.
 
@@ -13,7 +13,7 @@ A PHP library to query Google's Places service for querying locations and addres
 ```{json}
 {
    	"require": {
-        "markenwerk/google-datastructures": "*"
+        "chroma-x/google-datastructures": "*"
     }
 }
 ```
@@ -32,19 +32,19 @@ require_once('path/to/vendor/autoload.php');
 
 ### Reading a Google Places or Google Geocoder result
 
-See [PHP Google Places Suite](https://github.com/markenwerk/php-google-places-suite) or [PHP Google Geocoder](https://github.com/markenwerk/php-google-geocoder) for example libraries using these datastructures.
+See [PHP Google Places Suite](https://github.com/chroma-x/php-google-places-suite) or [PHP Google Geocoder](https://github.com/chroma-x/php-google-geocoder) for example libraries using these datastructures.
 
 **Attention:** Plaese note that all getter methods on the `GeoLocationAddress` return a `GeoLocationAddressComponent` instance or `null`. For preventing calls on non-objects the `GeoLocationAddress` class provides methods to check whether the address components exists. 
 
 ```{php}
-// Retrieving a query result as Markenwerk\GooglePlacesSuite\GooglePlacesDetailResult instance
+// Retrieving a query result as ChromaX\GooglePlacesSuite\GooglePlacesDetailResult instance
 $googlePlacesDetailQuery = new GooglePlacesDetailQuery();
 $googlePlacesDetailQuery
 	->setApiKey($this->googlePlacesApiKey)
 	->query('GOOGLE_PLACES_ID');
 $queryResult = $googlePlacesDetailQuery->getResult();
 
-// Retieving address information as Markenwerk\GoogleDataStructure\GeoLocation\GeoLocationAddress
+// Retieving address information as ChromaX\GoogleDataStructure\GeoLocation\GeoLocationAddress
 if($queryResult->hasAddress()) {
 
 	if ($queryResult->getAddress()->hasStreetName()) {
@@ -98,7 +98,7 @@ if($queryResult->hasAddress()) {
 
 }
 
-// Retieving address information as Markenwerk\GoogleDataStructure\GeoLocation\GeoLocationGeometry
+// Retieving address information as ChromaX\GoogleDataStructure\GeoLocation\GeoLocationGeometry
 if ($queryResult->hasGeometry()) {
 
 	if ($queryResult->getGeometry()->hasLocation()) {
@@ -140,7 +140,7 @@ if ($queryResult->hasGooglePlacesId()) {
 ## Contribution
 
 Contributing to our projects is always very appreciated.  
-**But: please follow the contribution guidelines written down in the [CONTRIBUTING.md](https://github.com/markenwerk/php-google-datastructures/blob/master/CONTRIBUTING.md) document.**
+**But: please follow the contribution guidelines written down in the [CONTRIBUTING.md](https://github.com/chroma-x/php-google-datastructures/blob/master/CONTRIBUTING.md) document.**
 
 ## License
 

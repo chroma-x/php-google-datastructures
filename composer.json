@@ -1,23 +1,23 @@
 {
-  "name": "markenwerk/google-datastructures",
+  "name": "chroma-x/google-datastructures",
   "type": "library",
   "description": "A PHP library providing common data structures to reflect data received from Google services.",
   "keywords": [
     "Google",
     "data structure"
   ],
-  "homepage": "http://markenwerk.net/",
+  "homepage": "http://chroma-x.de/",
   "license": "MIT",
   "authors": [
     {
       "name": "Martin Brecht-Precht",
-      "email": "mb@markenwerk.net",
-      "homepage": "http://markenwerk.net"
+      "email": "mb@chroma-x.de",
+      "homepage": "http://chroma-x.de"
     }
   ],
   "autoload": {
     "psr-4": {
-      "Markenwerk\\GoogleDataStructure\\": "src/"
+      "ChromaX\\GoogleDataStructure\\": "src/"
     }
   },
   "require": {
